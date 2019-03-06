@@ -1,0 +1,31 @@
+{
+  "name": "job-autofiller",
+  "version": "0.1",
+  "description": "Autofill personal information on job applications",
+  "homepage_url": "https://github.com/lovincyrus/job-autofiller",
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+		{
+      "matches": [
+        "https://boards.greenhouse.io/*",
+        "https://jobs.lever.co/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+		}
+	],
+  "options_page": "options.html",
+  "manifest_version": 2
+}
