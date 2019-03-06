@@ -3,6 +3,11 @@
   "version": "0.1",
   "description": "Autofill personal information on job applications",
   "homepage_url": "https://github.com/lovincyrus/job-autofiller",
+	"icons": { 
+		"16": "icon16.png",
+		"48": "icon48.png",
+		"128": "icon128.png" 
+	},
   "permissions": [
     "activeTab",
     "declarativeContent",
