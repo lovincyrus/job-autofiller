@@ -19,7 +19,7 @@ if (window.location.toString().includes("greenhouse")) {
     github: 'https://github.com/lovincyrus',
     twitter: 'https://twitter.com/cyrsgh',
     portfolio: 'https://lovincyrus.com',
-    other: 'http://blog.lovincyrus.com'
+    other: 'https://blog.lovincyrus.com'
   }
   
   const matchUpInfo = (key) => {
