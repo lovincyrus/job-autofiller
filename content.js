@@ -1,4 +1,4 @@
-console.log("chrome extension job-fillter is ready! 🍻")
+console.log("chrome extension job-autofiller is ready! 🍻")
 // console.log(window.location.toString())
 
 if (window.location.toString().includes("greenhouse")) {
@@ -49,4 +49,6 @@ if (window.location.toString().includes("greenhouse")) {
   }
   
   fillInInfo()
-} else { console.log("Only supproted lever and greenhouse job applications") }
+} else {
+  console.log("Only supported lever and greenhouse job applications")
+}
