@@ -1,11 +1,12 @@
-console.log("chrome extension content.js is ready")
-console.log(window.location.toString())
+console.log("chrome extension job-fillter is ready! 🍻")
+// console.log(window.location.toString())
 
 if (window.location.toString().includes("greenhouse")) {
   document.getElementById('first_name').value = 'Cyrus';
   document.getElementById('last_name').value = 'Goh';
   document.getElementById('email').value = 'lgoh@ucdavis.edu';
   document.getElementById('phone').value = '6509655034';
+  document.getElementById('job_application[location]').value = 'Davis, California, United States';
   document.getElementById('job_application_answers_attributes_0_text_value').value = 'https://www.linkedin.com/in/cyrusgoh/';
   document.getElementById('job_application_answers_attributes_1_text_value').value = 'https://www.lovincyrus.com';
 } else if (window.location.toString().includes("lever")) {
