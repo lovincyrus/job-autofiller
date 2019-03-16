@@ -1,54 +1,69 @@
-console.log("chrome extension job-autofiller is ready! 🍻")
-// console.log(window.location.toString())
+const AUTOFILL_DATA_FILE = chrome.runtime.getURL('data.json');
+const SITES_SELECTOR_MAPPING_FILE = chrome.runtime.getURL('sites.json');
 
-if (window.location.toString().includes("greenhouse")) {
-  document.getElementById('first_name').value = 'Cyrus';
-  document.getElementById('last_name').value = 'Goh';
-  document.getElementById('email').value = 'lgoh@ucdavis.edu';
-  document.getElementById('phone').value = '6509655034';
-  document.getElementById('job_application[location]').value = 'Davis, California, United States';
-  document.getElementById('job_application_answers_attributes_0_text_value').value = 'https://www.linkedin.com/in/cyrusgoh/';
-  document.getElementById('job_application_answers_attributes_1_text_value').value = 'https://www.lovincyrus.com';
-} else if (window.location.toString().includes("lever")) {
-  const info = {
-    name: 'Cyrus Goh',
-    email: 'lgoh@ucdavis.edu',
-    phone: '6509655034',
-    company: '8x Protocol',
-    linkedin: 'https://www.linkedin.com/in/cyrusgoh/',
-    github: 'https://github.com/lovincyrus',
-    twitter: 'https://twitter.com/cyrsgh',
-    portfolio: 'https://lovincyrus.com',
-    other: 'https://blog.lovincyrus.com'
+let autofillData = {};
+let supportedSites = [];
+let selectorMapping = {};
+
+/**
+ * Import the data.json file
+ */
+const dataStream = fetch(AUTOFILL_DATA_FILE)
+  .then(response => response.json())
+  .catch(e => console.log(`failed to read data.json: ${e}`));
+
+/**
+ * Import the sites.json file
+ */
+const sitesStream = fetch(SITES_SELECTOR_MAPPING_FILE)
+  .then(response => response.json())
+  .catch(e => console.log(`failed to read sites.json: ${e}`));
+
+/**
+ * Wait for all promises to be resolved before we initialize the extension
+ */
+Promise.all([
+  dataStream,
+  sitesStream
+]).then(responses => {
+  autofillData = responses[0];
+  supportedSites = responses[1].supportedSites;
+  selectorMapping = responses[1].selectorMapping;
+  init();
+})
+
+/**
+ * Initialize the autofill extension
+ */
+function init() {
+  const hostname = window.location.hostname;
+  if (supportedSites.includes(hostname)) {
+    autofillPage(hostname);
   }
-  
-  const matchUpInfo = (key) => {
-    if (key.includes('name'))       return info.name
-    if (key.includes('email'))      return info.email
-    if (key.includes('phone'))      return info.phone
-    if (key.includes('company'))    return info.company
-    if (key.includes('linkedin'))   return info.linkedin
-    if (key.includes('github'))     return info.github
-    if (key.includes('twitter'))    return info.twitter
-    if (key.includes('portfolio'))  return info.portfolio
-    if (key.includes('other'))      return info.other
-    return ''
+}
+
+/**
+ * Find the autofill-able input fields on the page according the hostname
+ * @param {String} hostname - hostname of the current window
+ */
+function autofillPage(hostname) {
+  for (let selector in selectorMapping[hostname]) {
+    const inputElement = $(selector);
+    if (inputElement.length) {
+      const inputData = selectorMapping[hostname][selector];
+      autofillInput(inputElement, inputData);
+    }
   }
-  
-  function fillInInfo() {
-    const questions = Array.from(document.querySelectorAll('.application-question'))
-    questions.forEach(item => {
-      const key = item.querySelector('.application-label').textContent.toLowerCase()
-      const value = matchUpInfo(key)
-      const field = item.querySelector('.application-field input')
-      if (field) {
-        field.value = value
-        field.text = value
-      }
-    })
-  }
-  
-  fillInInfo()
-} else {
-  console.log("Only supported lever and greenhouse job applications")
+}
+
+/**
+ * Autofill the input field(s) with the input data
+ * @param {jQuery} inputElement - jQuery Object containing the input element(s)
+ * @param {String} inputData - data to be autofilled into the input element
+ */
+function autofillInput(inputElement, inputData) {
+  const inputValue = autofillData[inputData];
+  inputElement.each(element => {
+    inputElement[element].value = inputValue;
+  });
 }
