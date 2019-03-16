@@ -20,10 +20,20 @@
         "https://jobs.lever.co/*"
       ],
       "js": [
-        "content.js"
+        "content.js",
+        "jquery-3.3.1.slim.min.js"
       ]
 		}
-	],
+  ],
+  "background": {
+    "scripts": [
+      "jquery-3.3.1.slim.min.js"
+    ]
+  },
   "options_page": "options.html",
-  "manifest_version": 2
+  "manifest_version": 3,
+  "web_accessible_resources": [
+    "data.json",
+    "sites.json"
+  ]
 }
