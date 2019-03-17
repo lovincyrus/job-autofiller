@@ -21,7 +21,8 @@
       "[name='urls[LinkedIn]']": "linkedin",
       "[name='urls[GitHub]']": "github",
       "[name='urls[Portfolio]']": "website",
-      "[name='urls[Other]']": "blog"
+      "[name='urls[Other]']": "blog",
+      "[name='urls[Twitter]']": "twitter"
     }
   }
 }
