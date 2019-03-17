@@ -1,10 +1,7 @@
 {
-  "supportedSites": [
-    "boards.greenhouse.io",
-    "jobs.lever.co"
-  ],
-  "selectorMapping": {
-    "boards.greenhouse.io": {
+  "boards.greenhouse.io": {
+    "isComplex": false,
+    "selectorMapping": {
       "[name='job_application[first_name]']": "firstName",
       "[name='job_application[last_name]']": "lastName",
       "[name='job_application[email]']": "email",
@@ -12,8 +9,11 @@
       "[name='job_application[location]']": "location",
       "[autocomplete='custom-question-linkedin-profile']": "linkedin",
       "[autocomplete='custom-question-website']": "website"
-    },
-    "jobs.lever.co": {
+    }
+  },
+  "jobs.lever.co": {
+    "isComplex": false,
+    "selectorMapping": {
       "[name='name']": "fullName",
       "[name='email']": "email",
       "[name='phone']": "phone",
