@@ -17,7 +17,8 @@
 		{
       "matches": [
         "https://boards.greenhouse.io/*",
-        "https://jobs.lever.co/*"
+        "https://jobs.lever.co/*",
+        "https://*.myworkdayjobs.com/*"
       ],
       "js": [
         "content.js",
