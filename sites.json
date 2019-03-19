@@ -24,5 +24,17 @@
       "[name='urls[Other]']": "blog",
       "[name='urls[Twitter]']": "twitter"
     }
+  },
+  "www.uber.com": {
+    "isComplex": false,
+    "selectorMapping": {
+      "[placeholder='First Name']": "firstName",
+      "[placeholder='Last Name']": "lastName",
+      "[placeholder='Phone Number']": "phone",
+      "[placeholder='Email']": "email",
+      "[placeholder='LinkedIn URL']": "linkedin",
+      "[placeholder='Github URL']": "github",
+      "[placeholder='Other URL']": "blog"
+    }
   }
 }
