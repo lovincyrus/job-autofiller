@@ -19,8 +19,11 @@
       "[name='phone']": "phone",
       "[name='org']": "currentCompany",
       "[name='urls[LinkedIn]']": "linkedin",
+      "[name='urls[LinkedIn Profile]']": "linkedin",
       "[name='urls[GitHub]']": "github",
+      "[name='urls[GitHub (if applicable)]']": "github",
       "[name='urls[Portfolio]']": "website",
+      "[name='urls[Portfolio (if applicable)]']": "website",
       "[name='urls[Other]']": "blog",
       "[name='urls[Twitter]']": "twitter"
     }
