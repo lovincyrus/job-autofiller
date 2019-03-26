@@ -8,7 +8,9 @@
       "[name='job_application[phone]']": "phone",
       "[name='job_application[location]']": "location",
       "[autocomplete='custom-question-linkedin-profile']": "linkedin",
-      "[autocomplete='custom-question-website']": "website"
+      "[autocomplete='custom-question-linkedin-profile-optional']": "linkedin",
+      "[autocomplete='custom-question-website']": "website",
+      "[autocomplete='custom-question-personal-website-or-blog-optional']": "website"
     }
   },
   "jobs.lever.co": {
