@@ -24,6 +24,7 @@
       "[name='urls[LinkedIn Profile]']": "linkedin",
       "[name='urls[GitHub]']": "github",
       "[name='urls[GitHub (if applicable)]']": "github",
+      "[name='urls[Personal Website]']": "website",
       "[name='urls[Portfolio]']": "website",
       "[name='urls[Portfolio (if applicable)]']": "website",
       "[name='urls[Other]']": "blog",
