@@ -1,14 +1,14 @@
 {
-  "firstName": "Cyrus",
-  "lastName": "Goh",
-  "fullName": "Cyrus Goh",
-  "email": "lgoh@ucdavis.edu",
-  "phone": "6509655034",
-  "location": "Davis, California, United States",
-  "currentCompany": "8x Protocol",
-  "website": "https://www.lovincyrus.com",
-  "linkedin": "https://www.linkedin.com/in/cyrusgoh/",
-  "github": "https://github.com/lovincyrus",
-  "twitter": "https://twitter.com/cyrsgh",
-  "blog": "https://blog.lovincyrus.com"
+  "firstName": "John",
+  "lastName": "Doe",
+  "fullName": "John Doe",
+  "email": "johndoe@gmail.com",
+  "phone": "4089102345",
+  "location": "San Francisco, California, United States",
+  "currentCompany": "X Company",
+  "website": "https://www.x.com",
+  "linkedin": "https://www.linkedin.com/in/x/",
+  "github": "https://github.com/x",
+  "twitter": "https://twitter.com/x",
+  "blog": "https://blog.x.com"
 }
