@@ -27,7 +27,7 @@
 		}
   ],
   "background": {
-    "scripts": [
+    "service_worker": [
       "jquery-3.3.1.slim.min.js"
     ]
   },
