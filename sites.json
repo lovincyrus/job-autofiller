@@ -10,7 +10,24 @@
       "[autocomplete='custom-question-linkedin-profile']": "linkedin",
       "[autocomplete='custom-question-linkedin-profile-optional']": "linkedin",
       "[autocomplete='custom-question-website']": "website",
-      "[autocomplete='custom-question-personal-website-or-blog-optional']": "website"
+      "[autocomplete='custom-question-personal-website-or-blog-optional']": "website",
+      "[name='job_application[educations][][school_name_id]']": "school",
+      "[name='job_application[educations][][discipline_id]']": "discipline",
+      "[name='job_application[educations][][start_date][month]']": "education_start_date_month",
+      "[name='job_application[educations][][start_date][year]']": "education_start_date_year",
+      "[name='job_application[educations][][end_date][month]']": "education_end_date_month",
+      "[name='job_application[educations][][end_date][year]']": "education_end_date_year",
+      "[name='job_application[employments][][company_name]']": "company_name",
+      "[name='job_application[employments][][title]']": "employment_title",
+      "[name='job_application[employments][][start_date][month]']": "employment_start_date_month",
+      "[name='job_application[employments][][start_date][year]']": "employment_start_date_year",
+      "[name='job_application[employments][][end_date][month]']": "employment_end_date_month",
+      "[name='job_application[employments][][end_date][year]']": "employment_end_date_year",
+      "[name='job_application[gender]']": "gender",
+      "[name='job_application[hispanic_ethnicity]']": "hispanic_ethnicity",
+      "[name='job_application[race]']": "race",
+      "[name='job_application[veteran_status]']": "veteran_status",
+      "[name='job_application[disability_status]']": "disability_status"
     }
   },
   "jobs.lever.co": {
