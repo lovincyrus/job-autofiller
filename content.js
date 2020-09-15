@@ -81,7 +81,7 @@ function autofillPage(siteName) {
     const inputElement = $(selector);
     if (inputElement.length) {
       const inputData = sitesData[siteName].selectorMapping[selector];
-      autofillInput(inputElement, inputData);
+      autofillInput(selector, inputData, inputElement);
     }
   }
 }
@@ -99,9 +99,13 @@ function autofillComplexPages(siteName) {
  * @param {jQuery} inputElement - jQuery Object containing the input element(s)
  * @param {String} inputData - data to be autofilled into the input element
  */
-function autofillInput(inputElement, inputData) {
+function autofillInput(selector, inputData, inputElement) {
   const inputValue = autofillData[inputData];
   inputElement.each(element => {
-    inputElement[element].value = inputValue;
+    if (inputElement[element].tagName === 'SELECT') {
+      $(`${selector} option:contains("${inputValue}")`).attr("selected", true);
+    } else {
+      $(selector).val(inputValue).change();
+    }
   });
 }
