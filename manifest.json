@@ -27,12 +27,12 @@
 		}
   ],
   "background": {
-    "service_worker": [
+    "scripts": [
       "jquery-3.3.1.slim.min.js"
     ]
   },
   "options_page": "options.html",
-  "manifest_version": 3,
+  "manifest_version": 2,
   "web_accessible_resources": [
     "data.json",
     "sites.json"
