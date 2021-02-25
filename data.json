@@ -10,5 +10,22 @@
   "linkedin": "https://www.linkedin.com/in/x/",
   "github": "https://github.com/x",
   "twitter": "https://twitter.com/x",
-  "blog": "https://blog.x.com"
+  "blog": "https://blog.x.com",
+  "school": "",
+  "discipline": "",
+  "education_start_date_month": "",
+  "education_start_date_year": "",
+  "education_end_date_month": "",
+  "education_end_date_year": "",
+  "company_name": "",
+  "employment_title": "",
+  "employment_start_date_month": "",
+  "employment_start_date_year": "",
+  "employment_end_date_month": "",
+  "employment_end_date_year": "",
+  "gender": "Male",
+  "hispanic_ethnicity": "No",
+  "race": "Asian",
+  "disability_status": "No, I don't have a disability, or a history/record of having a disability",
+  "veteran_status": "I am not a protected veteran"
 }
